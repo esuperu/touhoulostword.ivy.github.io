@@ -1,18 +1,16 @@
-body{
-    background-image: url(img/６枚目.jpg);
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(img/６枚目.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Yuji Syuku', serif;
 }
 
-.menu li {
-    list-style-type: none;
-    display: inline;
-    width: 180;
-}
-.menu a {
-    background: #6fbb9a;
-    color: #fff;
-}
 nav {
- width: 100%;
+  width: 100%;
   position: fixed;
   bottom: 30px;
   left: 50%;
@@ -30,15 +28,32 @@ nav a {
   border-radius: 10px;
   text-decoration: none;
   color: #ffd700;
-  background-color:#fff;
+  background-color: #fff;
 }
 
-     body {
-      margin: 0; 
-      padding: 0;
-      background-image: url(img/６枚目.jpg); 
-      background-size: cover; 
-      background-position: center; 
-      background-repeat: no-repeat; 
-      height: 100vh; 
-     }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 0;
+}
+
+footer p {
+  margin: 5px 0 0 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 2.5em;
+  margin: 0;
+  margin-left: 40px;
+}

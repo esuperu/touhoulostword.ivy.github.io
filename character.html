@@ -1,20 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
+    <meta charset="UTF-8">
     <title>キャラクター</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+
     <style>
         body {
-            background-image: url("img/背景2.1.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            margin-top: 5%;
+            font-family: 'Yuji Syuku', serif;
+            color: #ffffff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7)
+        }
+
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 2.5em;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.05);
+        }
+
+
+
+        .floating-button:hover {
+            background-color: #dddddd;
         }
     </style>
 </head>
 
 <body>
-    <h1 style="color: white;"></h1>
+    <div class="header-with-images">
+        <img src="img\11-removebg-preview.png" alt="左画像" class="side-image left">
+        <h1>平行世界にいる<br>様々なキャラクターを仲間にしよう</h1>
+        <img src="img\p_kirisame-removebg-preview.png" alt="右画像" class="side-image right">
+    </div>
+
+    <h2>
+        東方ロストワードでは、さまざまな能力や個性を持つキャラクターたちが登場します。<br>
+        攻撃に特化した者、仲間を守る者、支援を得意とする者など、役割は多彩！<br>
+        あなたの好みに合った仲間を見つけて、<br>一緒に平行世界の様々な幻想郷の冒険へ出かけましょう！
+    </h2>
+
+
+    <h3>
+        東方ロストワードには８つの式があります。
+        <br>それぞれ見ていこう！！
+    </h3>
+
+    <div class="grid-container">
+
+        <div class="grid-item"><a href="introduction.html#kougeki"><img src="img\攻撃式.png" alt="式1"></a></div>
+        <div class="grid-item"><a href="introduction.html#gikou"><img src="img\技巧式.png" alt="式2"></a></div>
+        <div class="grid-item"><a href="introduction.html#sien"><img src="img\支援式.png" alt="式3"></a></div>
+        <div class="grid-item"><a href="introduction.html#bougai"><img src="img\妨害式.png" alt="式4"></a></div>
+        <div class="grid-item"><a href="introduction.html#bougyo"><img src="img\防御式.png" alt="式5"></a></div>
+        <div class="grid-item"><a href="introduction.html#sokkou"><img src="img\速攻式.png" alt="式6"></a></div>
+        <div class="grid-item"><a href="introduction.html#hakai"><img src="img\破壊式.png" alt="式7"></a></div>
+        <div class="grid-item"><a href="introduction.html#kaihuku"><img src="img\回復式2.png" alt="式8"></a></div>
+    </div>
+
+    <a href="index.html" class="floating-button">トップページ</a>
+
 </body>
 
 </html>

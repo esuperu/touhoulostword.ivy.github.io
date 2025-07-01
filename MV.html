@@ -2,17 +2,121 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="reset.css">
-    <title>ＭＶプロジェクト</title>
-   
+  <link rel="stylesheet" href="reset.css">
+  <title>ＭＶプロジェクト</title>
+
 </head>
 
 <body>
-    <h1 style="color: white;"></h1>
-</body>
+  <h1 style="color: white;"></h1>
+
+
+  <h1 class="toho-title">ＭＶプロジェクトとは</h1>
+
+
+  <p class="about">
+    ＭＶプロジェクトは、原作「東方project」で活動している<br>音楽サークルと、
+    活動していないアーティストとのコラボです。
+  </p>
+
+
+  <div class="intor-with-image">
+    <img src="img/画像１０.1-removebg-preview.png" alt="アーティスト画像" class="intro-image">
+    <p class="about">
+      これまでに３０曲以上発表されていて<br>その中には、及川光博さんや島みやえい子さん・藤咲凪さんなど
+      <br>様々な方がコラボしています。
+      <br>下にあるのが現在発表されているものです
+    </p>
+  </div>
+
+
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      background-color: #800020;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #a00030;
+    }
+
+    iframe {
+      width: 640px;
+      height: 360px;
+      border: none;
+    }
+  </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="video-wrapper">
+      <button class="btn" onclick="prevVideo()">← 前へ</button>
+
+      <iframe id="youtubeFrame" src="https://www.youtube.com/embed/MTerv_AM-ew" allowfullscreen></iframe>
+
+      <button class="btn" onclick="nextVideo()">次へ →</button>
+    </div>
+
+    <script>
+
+      const videos = [
+        'MTerv_AM-ew', 'AhA--es6CLg', 'p-r4QjwLqxg',
+        'qTo9ifhQkY4', 'HXbQX1vi1vM', '7W6Un6yFEZ0',
+        '67Ee6dYqBBs', 'udTeBVWY36Y', 'v6BzO8EctoI',
+        'wV_R_D82Zo0', 'Ju05FWXGZ5w', 'oCNMQwtoDkc',
+        'TT7FWWTT-oY', 'QaDmA8GUEFM', 'FbhzPqi4YcM',
+        'MHOG0Ba3aoU', 'bOoDDNesPoE', 'TuQbQpGdOko',
+        '1fqmyApS_Ns', 'MW7WwkB0CLI', 'PH69IbSMK0o',
+        '3BRUo2GlCSs', '0YJWfy-Iv6Y', '6tHF9WhGSw4',
+        'z5IsbX_uves', 'B90XXn_pGDA', 'OxulNrH54A0',
+        '1I6Qcsm3Otg', 'hE7ydSJAKCM', 'hT2F54aqVYc',
+        'uvrCrP-qM3c','XZJ9enIlC1I',
+      ];
+
+      let currentIndex = 0;
+
+      function updateVideo() {
+        const iframe = document.getElementById("youtubeFrame");
+        iframe.src = "https://www.youtube.com/embed/" + videos[currentIndex] + "?autoplay=1";
+      }
+
+      function prevVideo() {
+        currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+        updateVideo();
+      }
+
+      function nextVideo() {
+        currentIndex = (currentIndex + 1) % videos.length;
+        updateVideo();
+      }
+    </script>
+
+  </body>
 
 </html>
 
-<h1 class="toho-title">ＭＶプロジェクトとは</h1>
-
-
+<a href="index.html" class="floating-button">トップページ</a>
